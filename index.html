@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Trung & Hoàng Oanh Wedding</title>
+    <meta property="og:title" content="Lễ Thành Hôn: Trung & Oanh" />
+<meta property="og:image"
+content="https://yourdomain.com/img/cover.jpg">    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<meta name="description"
+      content="Thiệp cưới online của Minh Trung và Hoàng Oanh">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet"></head><!-- Lightbox -->
+
+<body>
+<div id="lightbox">
+
+    <span id="close-lightbox">&times;</span>
+
+    <div class="lightbox-prev">&#10094;</div>
+
+    <img id="lightbox-img" src="" alt="Preview">
+
+    <div class="lightbox-next">&#10095;</div>
+
+</div>
+    <!-- Hoa rơi -->
+    <div id="snowflake-container" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="mainNav">
+        <div class="logo">T<span>&</span>O</div>
+        <ul>
+            <li><a href="#story">Câu chuyện</a></li>
+            <li><a href="#gallery">Album</a></li>
+            <li><a href="#event">Sự kiện</a></li>
+            <li><a href="#wish">Lời chúc</a></li>
+        </ul>
+    </nav>
+
+    <!-- Màn hình mở thiệp -->
+    <div id="overlay">
+        <div class="overlay-bg"></div>
+        <div class="overlay-content">
+            <h2>Đám Cưới Của</h2>
+            <div class="names-overlay">Trung & Oanh</div>
+            <div class="overlay-divider"></div>
+            <button class="btn-open" onclick="startWedding()">Mở Thiệp</button>
+        </div>
+    </div>
+
+    <!-- Nhạc nền -->
+    <audio id="bgMusic" loop>
+        <source src="music2.m4a" type="audio/mp4">
+    </audio>
+    <button id="music-btn" onclick="toggleMusic()" aria-label="Bật/tắt nhạc">🎵</button>
+
+    <!-- Hero -->
+  <!-- Hero -->
+<header class="reveal">
+    <p class="reveal delay-1">Trân Trọng Kính Mời</p>
+
+    <h1 class="names reveal-zoom delay-2">
+        Minh Trung & Hoàng Oanh
+    </h1>
+
+    <p class="reveal delay-3">
+        26.05.2026 — 27.05.2026
+    </p>
+
+    <div class="countdown reveal delay-4">
+        <div><span id="days">00</span><small>Ngày</small></div>
+        <div><span id="hours">00</span><small>Giờ</small></div>
+        <div><span id="minutes">00</span><small>Phút</small></div>
+        <div><span id="seconds">00</span><small>Giây</small></div>
+    </div>
+</header>
+
+
+<!-- =======================================================
+     THÔNG TIN GIA ĐÌNH + ẢNH CƯỚI
+======================================================= -->
+<section class="family-section reveal">
+
+
+
+    <!-- Nội dung -->
+    <div class="family-content reveal delay-2">
+
+        <div class="family-box">
+            <h3>NHÀ TRAI</h3>
+
+            <p>Ông: Võ Anh Đào</p>
+            <p>Bà: Trần Kim Hiền</p>
+        </div>
+
+        <div class="family-box">
+            <h3>NHÀ GÁI</h3>
+            <p>Ông: Nguyễn Phước Hải</p>
+            <p>Bà: Phạm Thị Lến</p>
+        </div>
+
+    </div>
+
+    <!-- Tiêu đề -->
+<div class="family-title reveal-zoom delay-3">
+
+    <p class="family-subtitle">
+        THƯ MỜI TIỆC CƯỚI
+    </p>
+
+    <h2 class="section-title">
+        Minh Trung
+    </h2>
+
+    <div class="and-symbol">&</div>
+
+    <h2 class="section-title">
+        Hoàng Oanh
+    </h2>
+
+</div>
+    <!-- Ảnh -->
+    <div class="family-gallery">
+
+        <div class="family-img reveal-left delay-1">
+            <img src="img/cr.jpg" alt="Ảnh cưới 1">
+        </div>
+
+        <div class="family-img center reveal-zoom delay-2">
+            <img src="img/both.jpg" alt="Ảnh cưới 2">
+        </div>
+
+        <div class="family-img reveal-right delay-3">
+            <img src="img/cd.jpg" alt="Ảnh cưới 3">
+        </div> 
+
+    </div>
+
+</section>
+
+
+
+
+<!-- Timeline -->
+<!-- =====================================================
+     TIMELINE - 2 CỘT SONG SONG (theo ảnh mẫu)
+====================================================== -->
+ 
+<section id="event" class="events-section reveal">
+ 
+  <div class="events-wrapper">
+ 
+    <!-- ĐẦU TRANG: tiêu đề section -->
+    <div class="events-heading reveal-zoom">
+      <span class="section-tag">Wedding Events</span>
+      <h2 class="section-title">Sự Kiện Trọng Đại</h2>
+    </div>
+ 
+    <!-- 2 CỘT SONG SONG -->
+    <div class="events-split">
+ 
+      <!-- CỘT TRÁI: LỄ VU QUY -->
+      <div class="ev-col ev-col--left reveal-left">
+ 
+        <div class="ev-label">
+          <h3>LỄ VU QUY</h3>
+        </div>
+ 
+        <div class="ev-rule"></div>
+ 
+        <div class="ev-body">
+          <div class="ev-time">08:00 - Thứ Ba</div>
+          <div class="ev-date-num">26.05.2026</div>
+          <div class="ev-lunar">(Nhằm ngày 10 tháng 04 năm Bính Ngọ)</div>
+          <div class="ev-place">
+            <span class="ev-place-icon">📍</span>
+            Tại Tư Gia Nhà Gái
+          </div>
+          <div class="ev-divider"></div>
+          <div class="ev-sub-label">Tiệc Mừng Lễ Vu Quy</div>
+          <div class="ev-sub-time">11:00 - Thứ Ba - 26/05/2026</div>
+          <div class="ev-sub-lunar">(Nhằm ngày 10 tháng 04 năm Bính Ngọ)</div>
+        </div>
+ 
+      </div>
+ 
+      <!-- ĐƯỜNG KẺ GIỮA + BIỂU TƯỢNG -->
+      <div class="ev-center">
+        <div class="ev-center-line"></div>
+        <div class="ev-center-diamond">
+          <svg width="36" height="36" viewBox="0 0 36 36">
+            <rect x="10" y="10" width="16" height="16" rx="2" transform="rotate(45 18 18)"
+              fill="none" stroke="#C9943A" stroke-width="1.5"/>
+            <circle cx="18" cy="18" r="3" fill="#C9943A"/>
+          </svg>
+        </div>
+        <div class="ev-center-line"></div>
+      </div>
+ 
+      <!-- CỘT PHẢI: LỄ THÀNH HÔN -->
+      <div class="ev-col ev-col--right reveal-right">
+ 
+        <div class="ev-label">
+          <h3>LỄ THÀNH HÔN</h3>
+        </div>
+ 
+        <div class="ev-rule"></div>
+ 
+        <div class="ev-body">
+          <div class="ev-time">09:00 - Thứ Tư</div>
+          <div class="ev-date-num">27.05.2026</div>
+          <div class="ev-lunar">(Nhằm ngày 11 tháng 04 năm Bính Ngọ)</div>
+          <div class="ev-place">
+            <span class="ev-place-icon">📍</span>
+            Tại Tư Gia Nhà Trai
+          </div>
+          <div class="ev-divider"></div>
+          <div class="ev-sub-label">Tiệc Mừng Lễ Thành Hôn</div>
+          <div class="ev-sub-time">11:00 - Thứ Tư - 27/05/2026</div>
+          <div class="ev-sub-lunar">(Nhằm ngày 11 tháng 04 năm Bính Ngọ)</div>
+        </div>
+ 
+      </div>
+ 
+    </div><!-- /.events-split -->
+     <h2 class="section-title reveal-zoom">
+        Save The Date
+    </h2>
+    <!-- LỊCH THÁNG 5 - 2026 -->
+    <div class="ev-calendar reveal-zoom delay-2">
+ 
+      <div class="cal-header">THÁNG 5 – 2026</div>
+ 
+      <div class="cal-grid">
+        <!-- Hàng tiêu đề -->
+        <div class="cal-th">T2</div>
+        <div class="cal-th">T3</div>
+        <div class="cal-th">T4</div>
+        <div class="cal-th">T5</div>
+        <div class="cal-th">T6</div>
+        <div class="cal-th">T7</div>
+        <div class="cal-th cal-th--sun">CN</div>
+ 
+        <!-- Tuần 1: 1/5 là thứ 6 → offset 4 ô -->
+        <div class="cal-empty"></div>
+        <div class="cal-empty"></div>
+        <div class="cal-empty"></div>
+        <div class="cal-empty"></div>
+        <div class="cal-day">1</div>
+        <div class="cal-day">2</div>
+        <div class="cal-day cal-sun">3</div>
+ 
+        <!-- Tuần 2 -->
+        <div class="cal-day">4</div>
+        <div class="cal-day">5</div>
+        <div class="cal-day">6</div>
+        <div class="cal-day">7</div>
+        <div class="cal-day">8</div>
+        <div class="cal-day">9</div>
+        <div class="cal-day cal-sun">10</div>
+ 
+        <!-- Tuần 3 -->
+        <div class="cal-day">11</div>
+        <div class="cal-day">12</div>
+        <div class="cal-day">13</div>
+        <div class="cal-day">14</div>
+        <div class="cal-day">15</div>
+        <div class="cal-day">16</div>
+        <div class="cal-day cal-sun">17</div>
+ 
+        <!-- Tuần 4 -->
+        <div class="cal-day">18</div>
+        <div class="cal-day">19</div>
+        <div class="cal-day">20</div>
+        <div class="cal-day">21</div>
+        <div class="cal-day">22</div>
+        <div class="cal-day">23</div>
+        <div class="cal-day cal-sun">24</div>
+ 
+        <!-- Tuần 5 -->
+        <div class="cal-day">25</div>
+        <!-- 26 = LỄ VU QUY, 27 = LỄ THÀNH HÔN -->
+        <div class="cal-day cal-highlight cal-highlight--left" title="Lễ Vu Quy">26</div>
+        <div class="cal-day cal-highlight cal-highlight--right" title="Lễ Thành Hôn">27</div>
+        <div class="cal-day">28</div>
+        <div class="cal-day">29</div>
+        <div class="cal-day">30</div>
+        <div class="cal-day cal-sun">31</div>
+      </div>
+ 
+      <!-- Chú thích -->
+      <div class="cal-legend">
+        <span class="cal-legend-dot cal-legend-dot--left"></span> Lễ Vu Quy (26/05)
+        <span class="cal-legend-dot cal-legend-dot--right" style="margin-left:18px;"></span> Lễ Thành Hôn (27/05)
+      </div>
+ 
+    </div><!-- /.ev-calendar -->
+ 
+  </div><!-- /.events-wrapper -->
+ 
+</section>
+
+
+
+
+
+
+<!-- Lời chúc -->
+<section id="wish" class="wish-container reveal">
+
+    <h2 class="section-title reveal-zoom">
+        Xác Nhận Tham Dự Hôn Lễ
+    </h2>
+
+    <div class="wish-form reveal delay-2">
+
+        <label for="name">Tên của quý khách</label>
+
+        <input type="text"
+               id="name"
+               placeholder="Nhập tên của bạn...">
+
+        <label for="wish-input">
+            Gửi lời chúc đến dâu rể nhé
+        </label>
+
+        <textarea id="wish-input"
+                  rows="5"
+                  placeholder="Gửi gắm lời chúc ngọt ngào nhất..."></textarea>
+
+        <button class="btn-send"
+                id="submitBtn"
+                onclick="sendData()">
+
+            GỬI NGAY
+
+        </button>
+
+        <div id="msg"
+             style="text-align:center; margin-top:12px; color:var(--gold-primary);">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Câu chuyện tình yêu -->
+<section class="love-story reveal" id="story">
+
+    <div class="story-container">
+
+        <div class="story-text-card reveal-left">
+
+            <div class="story-header reveal delay-1">
+
+                <h2 class="story-title reveal delay-2">
+                    Chuyện Chúng Mình
+                </h2>
+
+            </div>
+
+            <div class="story-content reveal delay-3">
+
+                
+                <p>Một buổi chiều tưởng chừng như bình thường nhưng lại mở ra một hành trình hạnh phúc mãi về sau.</p>
+                    <p>Chuyện bắt đầu từ một cái ngoái đầu...</p><p>Mùa xuân năm 2019, có một chàng trai vừa rời sân bóng đã lỡ "va" phải nụ cười của cô gái đang ăn bánh tráng nướng bên đường. Chẳng ai ngờ cái ngoái đầu định mệnh ấy đã dẫn lối cho những buổi sáng Trung đứng đợi trước tiệm bánh mì, chỉ để nhìn thấy Oanh đi học mỗi ngày. Từ một lời ngỏ ý "hay mình quen nhau cho vui" vào ngày 02/02 đẹp trời, cái "vui" ấy đã hóa thành chân thành, biến mối tình đầu của chàng trai năm ấy thành hành trình hạnh phúc suốt một đời.</p>
+                <div class="story-image-collage reveal-right">
+
+</div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- Album -->
+<!-- =====================================================
+     ALBUM ẢNH CƯỚI - MASONRY LUXURY
+====================================================== -->
+<section id="gallery" class="gallery-section reveal">
+ 
+  <div class="gallery-header">
+    <span class="section-tag">Wedding Gallery</span>
+    <h2 class="section-title">Album Hình Cưới</h2>
+    <p class="gallery-desc">Những khoảnh khắc đẹp nhất của chúng mình</p>
+  </div>
+ 
+  <!-- FEATURED ROW -->
+  <div class="gallery-featured reveal delay-1">
+    <div class="gf-main">
+      <img src="img/al1.jpg" alt="Ảnh cưới chính" loading="lazy">
+      <div class="gf-overlay">
+        <span class="gf-icon">❤</span>
+      </div>
+    </div>
+    <div class="gf-side">
+      <div class="gf-side-item">
+        <img src="img/al.jpg" alt="Ảnh cưới" loading="lazy">
+        <div class="gf-overlay"><span class="gf-icon">❤</span></div>
+      </div>
+      <div class="gf-side-item">
+        <img src="img/al2.jpg" alt="Ảnh cưới" loading="lazy">
+        <div class="gf-overlay"><span class="gf-icon">❤</span></div>
+      </div>
+    </div>
+  </div>
+
+<br><br><br>
+    <div class="gallery-header">
+
+    <p class="gallery-desc">Hôn nhân là chuyện cả đời,
+Yêu người vừa ý, cưới người mình thương...</p>
+  </div>
+ 
+  <!-- FEATURED ROW -->
+  <div class="gallery-featured reveal delay-1">
+    <div class="gf-main">
+      <img src="img/al3.jpg" alt="Ảnh cưới chính" loading="lazy">
+      <div class="gf-overlay">
+        <span class="gf-icon">❤</span>
+      </div>
+    </div>
+    <div class="gf-side">
+      <div class="gf-side-item">
+        <img src="img/al4.jpg" alt="Ảnh cưới" loading="lazy">
+        <div class="gf-overlay"><span class="gf-icon">❤</span></div>
+      </div>
+      <div class="gf-side-item">
+        <img src="img/al5.jpg" alt="Ảnh cưới" loading="lazy">
+        <div class="gf-overlay"><span class="gf-icon">❤</span></div>
+      </div>
+    </div>
+  </div>
+ <div class="gr-item gr-item--tall">
+      <img src="img/al6.jpg" alt="Ảnh cưới" loading="lazy">
+      <div class="gf-overlay"><span class="gf-icon">❤</span></div>
+    </div>
+  
+
+
+    <br><br><br>
+    <div class="gallery-header">
+
+    <p class="gallery-desc">"Một lời hứa, một cái nắm tay, một đời bên nhau."</p>
+  </div>
+ 
+  <!-- FEATURED ROW -->
+  <div class="gallery-featured reveal delay-1">
+    <div class="gf-main">
+      <img src="img/al7.jpg" alt="Ảnh cưới chính" loading="lazy">
+      <div class="gf-overlay">
+        <span class="gf-icon">❤</span>
+      </div>
+    </div>
+ 
+</section>
+
+
+
+
+<!-- Lời ngỏ -->
+<section class="intro-section reveal">
+
+    <div class="intro-container reveal-zoom">
+        <h2 class="intro-title reveal delay-2">
+           Thank You For Being Part Of Our Special Day
+        </h2>
+
+        <div class="intro-content reveal delay-3">
+
+<p>Mọi sự bận rộn xin được gác lại phía sau cánh cửa, bởi ngày Hạnh Phúc của chúng mình sẽ chỉ thực sự trọn vẹn khi có bạn kề bên.</p>
+    <p>Chúng mình rất trân trọng và mong chờ được đón tiếp bạn để cùng chứng kiến, sẻ chia và lưu giữ những khoảnh khắc không thể nào quên này. Sự hiện diện của bạn chính là niềm vinh hạnh lớn nhất của hai chúng mình! ❤️</p> </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer class="footer reveal">
+
+     <h2 class="section-title reveal-zoom">
+        Rất hân hạnh được đón tiếp!
+
+    </h2>
+
+    <p class="reveal delay-2">
+        26.05.2026 — 27.05.2026
+    </p>
+
+
+</footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const API_URL = "https://script.google.com/macros/s/AKfycbz0w84-uYxWsHsAJ0xwAslNtsmrzt32DtKmehfXEtL-ddZjMnqnz66YdT9kbMhqsV7rGg/exec";
+        const music = document.getElementById("bgMusic");
+        const musicBtn = document.getElementById("music-btn");
+
+        // Khởi tạo âm lượng
+        music.volume = 0;
+
+        // --- Hoa rơi ---
+        function createSnowflakes() {
+            const container = document.getElementById("snowflake-container");
+            if (!container) return;
+            const icons = ["🌸", "🌸", "❤️", "✨"];
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i < 30; i++) {
+                const el = document.createElement("div");
+                el.className = "snowflake";
+                el.textContent = icons[Math.floor(Math.random() * icons.length)];
+                el.style.cssText = `
+                    left: ${Math.random() * 100}vw;
+                    animation-duration: ${Math.random() * 5 + 5}s;
+                    animation-delay: ${Math.random() * 5}s;
+                    font-size: ${Math.random() * 10 + 14}px;
+                    opacity: ${Math.random() * 0.6 + 0.3};
+                `;
+                fragment.appendChild(el);
+            }
+            container.appendChild(fragment);
+        }
+        createSnowflakes();
+
+        // --- Mở thiệp ---
+        window.startWedding = function () {
+            document.getElementById("overlay").classList.add("opened-overlay");
+            music.play().catch(() => {});
+            let vol = 0;
+            const fadeIn = setInterval(() => {
+                if (vol < 0.5) { vol = Math.min(vol + 0.05, 0.5); music.volume = vol; }
+                else clearInterval(fadeIn);
+            }, 100);
+            musicBtn.classList.add("spinning");
+        };
+
+        // --- Nhạc ---
+        window.toggleMusic = function () {
+            if (music.paused) {
+                music.play().catch(() => {});
+                musicBtn.classList.add("spinning");
+            } else {
+                music.pause();
+                musicBtn.classList.remove("spinning");
+            }
+        };
+
+        // --- Countdown ---
+        const weddingDate = new Date("2026-05-26T12:00:00").getTime();
+        function updateCountdown() {
+            const gap = weddingDate - Date.now();
+            if (gap <= 0) return;
+            document.getElementById("days").textContent    = String(Math.floor(gap / 86400000)).padStart(2, "0");
+            document.getElementById("hours").textContent   = String(Math.floor(gap / 3600000) % 24).padStart(2, "0");
+            document.getElementById("minutes").textContent = String(Math.floor(gap / 60000) % 60).padStart(2, "0");
+            document.getElementById("seconds").textContent = String(Math.floor(gap / 1000) % 60).padStart(2, "0");
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // --- Lightbox ---
+        const lightbox    = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        document.querySelectorAll(".gallery-item img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add("active");
+            });
+        });
+        document.getElementById("close-lightbox").addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+        lightbox.addEventListener("click", e => {
+            if (e.target === lightbox) lightbox.classList.remove("active");
+        });
+
+        // --- Gửi lời chúc ---
+        window.sendData = function () {
+            const name = document.getElementById("name").value.trim();
+            const wish = document.getElementById("wish-input").value.trim();
+            const msg  = document.getElementById("msg");
+            if (!name) { alert("Vui lòng nhập tên!"); return; }
+            const btn = document.getElementById("submitBtn");
+            btn.textContent = "Đang gửi...";
+            btn.disabled = true;
+            fetch(API_URL, {
+                method: "POST",
+                mode: "no-cors",
+                body: JSON.stringify({ name, wish })
+            })
+            .then(() => {
+                msg.textContent = "Cảm ơn bạn đã gửi lời chúc! 💛";
+                document.getElementById("name").value = "";
+                document.getElementById("wish-input").value = "";
+            })
+            .catch(() => {
+                msg.textContent = "Có lỗi xảy ra. Vui lòng thử lại!";
+            })
+            .finally(() => {
+                btn.textContent = "Gửi Lời Chúc Hạnh Phúc";
+                btn.disabled = false;
+            });
+        };
+
+        // --- Navbar thu nhỏ khi scroll ---
+        const navbar = document.getElementById("mainNav");
+        window.addEventListener("scroll", () => {
+            navbar.classList.toggle("scrolled", window.scrollY > 60);
+        }, { passive: true });
+
+    });
+
+
+const petalsCount = window.innerWidth < 768 ? 10 : 20;
+
+for (let i = 0; i < petalsCount; i++) {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+
+    petal.style.left = Math.random() * 100 + 'vw';
+
+    petal.style.animationDuration =
+        (8 + Math.random() * 6) + 's, ' +
+        (3 + Math.random() * 2) + 's';
+
+    petal.style.animationDelay =
+        Math.random() * 5 + 's';
+
+    petal.style.opacity =
+        0.4 + Math.random() * 0.5;
+
+    petal.style.transform =
+        `scale(${0.6 + Math.random() * 0.8})`;
+
+    document.body.appendChild(petal);
+}
+
+
+
+const reveals = document.querySelectorAll(
+    '.reveal, .reveal-left, .reveal-right, .reveal-zoom'
+);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+reveals.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
