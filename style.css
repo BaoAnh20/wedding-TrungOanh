@@ -1226,8 +1226,7 @@ input:focus, textarea:focus {
     .logo { font-size: 2rem; letter-spacing: 1px; }
 
     /* Hero */
-    header { min-height: 100svh; height: auto; padding: 120px 5% 80px; -webkit-transform: translateZ(0); /* Kích hoạt tăng tốc phần cứng */
-    will-change: transform;}
+    header { min-height: 100svh; height: auto; padding: 120px 5% 80px;}
     header p:first-child { font-size: 0.7rem; letter-spacing: 4px; margin-bottom: 14px; }
     header p:last-of-type { font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 36px; }
     .names { font-size: clamp(3rem, 14vw, 5rem); line-height: 1.15; letter-spacing: 1px; }
