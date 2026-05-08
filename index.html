@@ -302,50 +302,97 @@ content="https://yourdomain.com/img/cover.jpg">    <link href="https://fonts.goo
 </section>
 
 
+<!-- Địa điểm tổ chức -->
+<section class="location-section reveal">
+  <div class="location-wrapper reveal-zoom">
+    <span class="section-tag">Wedding Venue</span>
+    <h2 class="section-title">Địa Điểm Tổ Chức</h2>
 
+    <div class="location-cards">
 
+      <div class="location-card reveal-left delay-1">
+        <div class="location-icon">🏠</div>
+        <h3>NHÀ TRAI</h3>
+        <div class="location-divider"></div>
+        <p>Số 227, Khu Phố Kinh B</p>
+        <p>Xã Tân Hiệp, Tỉnh An Giang</p>
+        <!-- <a class="location-map-btn"
+           href="https://maps.google.com/?q=Tân+Hiệp+An+Giang"
+           target="_blank"> -->
+          <!-- 📍 Xem bản đồ
+        </a> -->
+      </div>
 
+      <div class="location-divider-center">
+        <svg width="36" height="36" viewBox="0 0 36 36">
+          <rect x="10" y="10" width="16" height="16" rx="2"
+                transform="rotate(45 18 18)"
+                fill="none" stroke="#C9943A" stroke-width="1.5"/>
+          <circle cx="18" cy="18" r="3" fill="#C9943A"/>
+        </svg>
+      </div>
 
-<!-- Lời chúc -->
-<section id="wish" class="wish-container reveal">
-
-    <h2 class="section-title reveal-zoom">
-        Xác Nhận Tham Dự Hôn Lễ
-    </h2>
-
-    <div class="wish-form reveal delay-2">
-
-        <label for="name">Tên của quý khách</label>
-
-        <input type="text"
-               id="name"
-               placeholder="Nhập tên của bạn...">
-
-        <label for="wish-input">
-            Gửi lời chúc đến dâu rể nhé
-        </label>
-
-        <textarea id="wish-input"
-                  rows="5"
-                  placeholder="Gửi gắm lời chúc ngọt ngào nhất..."></textarea>
-
-        <button class="btn-send"
-                id="submitBtn"
-                onclick="sendData()">
-
-            GỬI NGAY
-
-        </button>
-
-        <div id="msg"
-             style="text-align:center; margin-top:12px; color:var(--gold-primary);">
-        </div>
+      <div class="location-card reveal-right delay-2">
+        <div class="location-icon">🏡</div>
+        <h3>NHÀ GÁI</h3>
+        <div class="location-divider"></div>
+        <p>Số 10, Ấp Tân An</p>
+        <p>Xã Tân Hiệp, Tỉnh An Giang</p>
+        <!-- <a class="location-map-btn"
+           href="https://maps.google.com/?q=Tân+Hiệp+An+Giang"
+           target="_blank">
+          📍 Xem bản đồ
+        </a> -->
+      </div>
 
     </div>
-
+  </div>
 </section>
 
+<section id="wish" class="wish-container reveal">
 
+  <h2 class="section-title reveal-zoom">
+    Xác Nhận Tham Dự Hôn Lễ
+  </h2>
+
+  <div class="wish-form reveal delay-2">
+
+    <label for="name">Tên của quý khách</label>
+    <input type="text" id="name" placeholder="Nhập tên của bạn...">
+
+    <label>Quý khách tham dự tại</label>
+    <div class="radio-group">
+      <label class="radio-label">
+        <input type="radio" name="venue" value="Nhà Trai"> Nhà Trai
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="venue" value="Nhà Gái"> Nhà Gái
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="venue" value="Cả Hai"> Cả Hai
+      </label>
+    </div>
+
+    <label for="guests">Số lượng người tham dự</label>
+    <input type="number" id="guests" min="1" max="20"
+           placeholder="Nhập số người..." style="width:100%;padding:12px 16px;
+           border:1px solid rgba(201,148,58,0.35);border-radius:8px;
+           background:rgba(255,255,255,0.05);color:inherit;font-size:1rem;
+           margin-bottom:16px;box-sizing:border-box;">
+
+    <label for="wish-input">Gửi lời chúc đến dâu rể nhé</label>
+    <textarea id="wish-input" rows="5"
+              placeholder="Gửi gắm lời chúc ngọt ngào nhất..."></textarea>
+
+    <button class="btn-send" id="submitBtn" onclick="sendData()">
+      GỬI NGAY
+    </button>
+
+    <div id="msg" style="text-align:center;margin-top:12px;
+         color:var(--gold-primary);"></div>
+
+  </div>
+</section>
 
 <!-- Câu chuyện tình yêu -->
 <section class="love-story reveal" id="story">
@@ -498,8 +545,8 @@ Yêu người vừa ý, cưới người mình thương...</p>
 </footer>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
-
-        const API_URL = "https://script.google.com/macros/s/AKfycbz0w84-uYxWsHsAJ0xwAslNtsmrzt32DtKmehfXEtL-ddZjMnqnz66YdT9kbMhqsV7rGg/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbxXhxzE0z6e8RXYshg7a1o6HhpbkPpIPyw0_FQSMXMlFZZvJHozk8lNeb79YwNNZyimXw/exec";
+        // const API_URL = "https://script.google.com/macros/s/AKfycbz0w84-uYxWsHsAJ0xwAslNtsmrzt32DtKmehfXEtL-ddZjMnqnz66YdT9kbMhqsV7rGg/exec";
         const music = document.getElementById("bgMusic");
         const musicBtn = document.getElementById("music-btn");
 
@@ -582,33 +629,73 @@ Yêu người vừa ý, cưới người mình thương...</p>
         });
 
         // --- Gửi lời chúc ---
-        window.sendData = function () {
-            const name = document.getElementById("name").value.trim();
-            const wish = document.getElementById("wish-input").value.trim();
-            const msg  = document.getElementById("msg");
-            if (!name) { alert("Vui lòng nhập tên!"); return; }
-            const btn = document.getElementById("submitBtn");
-            btn.textContent = "Đang gửi...";
-            btn.disabled = true;
-            fetch(API_URL, {
-                method: "POST",
-                mode: "no-cors",
-                body: JSON.stringify({ name, wish })
-            })
-            .then(() => {
-                msg.textContent = "Cảm ơn bạn đã gửi lời chúc! 💛";
-                document.getElementById("name").value = "";
-                document.getElementById("wish-input").value = "";
-            })
-            .catch(() => {
-                msg.textContent = "Có lỗi xảy ra. Vui lòng thử lại!";
-            })
-            .finally(() => {
-                btn.textContent = "Gửi Lời Chúc Hạnh Phúc";
-                btn.disabled = false;
-            });
-        };
+        // window.sendData = function () {
+        //     const name = document.getElementById("name").value.trim();
+        //     const wish = document.getElementById("wish-input").value.trim();
+        //     const msg  = document.getElementById("msg");
+        //     if (!name) { alert("Vui lòng nhập tên!"); return; }
+        //     const btn = document.getElementById("submitBtn");
+        //     btn.textContent = "Đang gửi...";
+        //     btn.disabled = true;
+        //     fetch(API_URL, {
+        //         method: "POST",
+        //         mode: "no-cors",
+        //         body: JSON.stringify({ name, wish })
+        //     })
+        //     .then(() => {
+        //         msg.textContent = "Cảm ơn bạn đã gửi lời chúc! 💛";
+        //         document.getElementById("name").value = "";
+        //         document.getElementById("wish-input").value = "";
+        //     })
+        //     .catch(() => {
+        //         msg.textContent = "Có lỗi xảy ra. Vui lòng thử lại!";
+        //     })
+        //     .finally(() => {
+        //         btn.textContent = "Gửi Lời Chúc Hạnh Phúc";
+        //         btn.disabled = false;
+        //     });
+        // };
+window.sendData = function () {
+  const name   = document.getElementById("name").value.trim();
+  const guests = document.getElementById("guests").value.trim();
+  const wish   = document.getElementById("wish-input").value.trim();
+  const venue  = document.querySelector('input[name="venue"]:checked');
+  const msg    = document.getElementById("msg");
 
+  if (!name)   { alert("Vui lòng nhập tên!"); return; }
+  if (!venue)  { alert("Vui lòng chọn nơi tham dự!"); return; }
+  if (!guests) { alert("Vui lòng nhập số người tham dự!"); return; }
+
+  const btn = document.getElementById("submitBtn");
+  btn.textContent = "Đang gửi...";
+  btn.disabled = true;
+
+  fetch(API_URL, {
+    method: "POST",
+    mode: "no-cors",
+    body: JSON.stringify({
+      name,
+      venue: venue.value,
+      guests,
+      wish
+    })
+  })
+  .then(() => {
+    msg.textContent = "Cảm ơn bạn đã xác nhận tham dự! 💛";
+    document.getElementById("name").value = "";
+    document.getElementById("guests").value = "";
+    document.getElementById("wish-input").value = "";
+    document.querySelectorAll('input[name="venue"]')
+            .forEach(r => r.checked = false);
+  })
+  .catch(() => {
+    msg.textContent = "Có lỗi xảy ra. Vui lòng thử lại!";
+  })
+  .finally(() => {
+    btn.textContent = "GỬI NGAY";
+    btn.disabled = false;
+  });
+};
         // --- Navbar thu nhỏ khi scroll ---
         const navbar = document.getElementById("mainNav");
         window.addEventListener("scroll", () => {

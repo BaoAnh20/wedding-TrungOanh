@@ -1226,7 +1226,8 @@ input:focus, textarea:focus {
     .logo { font-size: 2rem; letter-spacing: 1px; }
 
     /* Hero */
-    header { min-height: 100svh; height: auto; padding: 120px 5% 80px; }
+    header { min-height: 100svh; height: auto; padding: 120px 5% 80px;-webkit-transform: translateZ(0); /* Kích hoạt tăng tốc phần cứng */
+    will-change: transform; }
     header p:first-child { font-size: 0.7rem; letter-spacing: 4px; margin-bottom: 14px; }
     header p:last-of-type { font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 36px; }
     .names { font-size: clamp(3rem, 14vw, 5rem); line-height: 1.15; letter-spacing: 1px; }
@@ -2010,5 +2011,276 @@ input:focus, textarea:focus {
 
   .gr-item {
     min-height: 380px;
+  }
+}
+
+/* ── LOCATION SECTION ─────────────────────────── */
+.location-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.location-wrapper { max-width: 860px; margin: 0 auto; }
+
+.location-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.location-card {
+  background: rgba(201,148,58,0.07);
+  border: 1px solid rgba(201,148,58,0.3);
+  border-radius: 16px;
+  padding: 36px 32px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  transition: transform .3s, box-shadow .3s;
+}
+.location-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(201,148,58,0.18);
+}
+.location-icon { font-size: 2.2rem; margin-bottom: 12px; }
+.location-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold-primary, #C9943A);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.location-divider {
+  width: 48px; height: 1px;
+  background: var(--gold-primary, #C9943A);
+  margin: 12px auto 16px;
+  opacity: .5;
+}
+.location-card p { margin: 4px 0; line-height: 1.7; font-size: .97rem; }
+
+.location-map-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 22px;
+  border: 1px solid var(--gold-primary, #C9943A);
+  border-radius: 50px;
+  color: var(--gold-primary, #C9943A);
+  font-size: .88rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background .3s, color .3s;
+}
+.location-map-btn:hover {
+  background: var(--gold-primary, #C9943A);
+  color: #fff;
+}
+.location-divider-center { padding: 0 8px; opacity: .7; }
+
+/* ── RADIO GROUP ──────────────────────────────── */
+.radio-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: .97rem;
+  padding: 10px 20px;
+  border: 1px solid rgba(201,148,58,0.35);
+  border-radius: 50px;
+  transition: background .25s, border-color .25s;
+}
+.radio-label:has(input:checked) {
+  background: rgba(201,148,58,0.18);
+  border-color: var(--gold-primary, #C9943A);
+}
+.radio-label input[type="radio"] { accent-color: #C9943A; }
+/* =========================================================
+   MOBILE FIX PATCH — thêm vào cuối style.css
+========================================================= */
+
+/* ── 1. NAVBAR: thêm hamburger menu ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  border: none;
+  background: none;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--gold-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile menu dropdown */
+.nav-menu-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(253,250,244,0.97);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+.nav-menu-mobile.open { display: flex; }
+.nav-menu-mobile a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+.nav-menu-mobile a:hover { color: var(--gold-primary); }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .navbar ul { display: none !important; } /* giữ ẩn, dùng mobile menu */
+}
+
+/* ── 2. FAMILY SECTION: fix font size và overflow ── */
+@media (max-width: 768px) {
+  .family-gallery {
+    flex-wrap: nowrap; /* giữ 3 ảnh 1 hàng */
+    overflow: hidden;
+    gap: 10px;
+  }
+  .family-img {
+    width: 29%;
+    height: 160px;
+    min-width: 0; /* quan trọng: tránh overflow */
+  }
+  .family-img.center {
+    width: 38%;
+    height: 220px;
+  }
+  .family-box h3 {
+    font-size: 13px !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 1px;
+  }
+  .family-box p {
+    font-size: 12px !important;
+    margin-bottom: 5px !important;
+    line-height: 1.5;
+  }
+  .family-subtitle {
+    font-size: 17px !important;
+    margin-bottom: 14px !important;
+  }
+  .and-symbol { font-size: 26px !important; }
+}
+
+@media (max-width: 480px) {
+  .family-img { width: 28%; height: 130px; }
+  .family-img.center { width: 40%; height: 185px; }
+  .family-box h3 { font-size: 11px !important; }
+  .family-box p { font-size: 11px !important; }
+}
+
+/* ── 3. LOCATION SECTION: mobile fix ── */
+@media (max-width: 768px) {
+  .location-section { padding: 60px 16px; }
+  .location-cards {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .location-card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 28px 24px;
+  }
+  /* tắt hover transform trên touch */
+  .location-card:hover { transform: none; }
+}
+
+/* ── 4. RADIO GROUP: fix tràn hàng ── */
+@media (max-width: 768px) {
+  .radio-group {
+    gap: 10px;
+    justify-content: center;
+  }
+  .radio-label {
+    font-size: 0.82rem;
+    padding: 9px 14px;
+    /* đảm bảo tap target đủ 44px */
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .radio-group { flex-direction: column; align-items: stretch; }
+  .radio-label { justify-content: center; }
+}
+
+/* ── 5. SECTION PADDING: giảm thêm ở màn nhỏ ── */
+@media (max-width: 480px) {
+  section { padding: 60px 16px !important; }
+  .events-section,
+  .gallery-section,
+  .love-story,
+  #wish,
+  .intro-section,
+  .family-section { padding: 60px 16px !important; }
+
+  /* wish form */
+  .wish-form { padding: 30px 18px !important; }
+}
+
+/* ── 6. INPUT NUMBER: responsive style ── */
+#guests {
+  width: 100% !important;
+  padding: 14px 0 10px !important;
+  border: none !important;
+  border-bottom: 1.5px solid rgba(201,148,58,0.2) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-family: var(--font-serif) !important;
+  font-size: 1.05rem !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 24px !important;
+  box-sizing: border-box !important;
+  -moz-appearance: textfield;
+}
+#guests::-webkit-inner-spin-button,
+#guests::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* ── 7. TOUCH ACTION toàn cục ── */
+button, a, .radio-label, .location-map-btn,
+.btn-open, .btn-send, #music-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── 8. SAFE AREA: tránh notch/home bar iOS ── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .footer { padding-bottom: calc(50px + env(safe-area-inset-bottom)); }
+  #music-btn {
+    bottom: calc(18px + env(safe-area-inset-bottom));
   }
 }
